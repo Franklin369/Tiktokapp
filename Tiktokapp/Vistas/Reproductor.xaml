@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tiktokapp.Vistas.Reproductor"
+             xmlns:ImageCircular="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:video="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer">
+    <Grid BackgroundColor="Black"
+          RowDefinitions="*,70">
+        <Grid>
+            <video:VideoPlayer 
+                               AutoPlay="True"
+                               Repeat="True"
+                               x:Name="rvideo"/>
+            <StackLayout HorizontalOptions="Start"
+                         VerticalOptions="End"
+                         Margin="12,0,0,12">
+                <Label Text="@star_tyo"
+                       TextColor="White"
+                       FontAttributes="Bold" />
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="MOOD"
+                           TextColor="White"
+                           FontAttributes="Bold" />
+                    <Label Text="#Viral"
+                           TextColor="White"
+                           FontAttributes="Bold" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="https://i.ibb.co/w74mB9n/musica.png"
+                           HeightRequest="18" />
+                    <Label Text="Nombre de cancion"
+                           TextColor="White"
+                           FontAttributes="Bold" />
+                </StackLayout>
+            </StackLayout>
+            <!--#region Panel disco giratorio -->
+            <StackLayout VerticalOptions="End"
+                         HorizontalOptions="End"
+                         WidthRequest="80"
+                         Spacing="30"
+                         Margin="0,0,12,12">
+                <Grid>
+                    <ImageCircular:CircleImage Source="https://i.ibb.co/2W563k7/julieta-venegas.jpg"
+                                               BorderColor="White"
+                                               BorderThickness="2" />
+                    <Button BackgroundColor="#F5004E"
+                            HeightRequest="30"
+                            WidthRequest="30"
+                            CornerRadius="15"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TranslationY="12" />
+                    <Label Text="+"
+                           TextColor="White"
+                           VerticalOptions="End"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalTextAlignment="End"
+                           FontSize="18"
+                           TranslationY="10" />
+                </Grid>
+                <StackLayout>
+                    <Image Source="https://i.ibb.co/ZW9j2Z8/me-gusta.png"
+                           HeightRequest="55" />
+                    <Label Text="278.2 k"
+                           FontSize="18"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="https://i.ibb.co/D8x1NLf/chat-de-burbujas.png"
+                           HeightRequest="55" />
+                    <Label Text="1488"
+                           FontSize="18"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="https://i.ibb.co/vHsH8Yv/compartir-1.png"
+                           HeightRequest="55" />
+                    <Label Text="12.6 k"
+                           FontSize="18"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+                <Grid>
+                    <Image Source="https://i.ibb.co/PC0tq1n/5856b3d14f6ae202fedf2793.png" />
+                    <ImageCircular:CircleImage Source="https://i.ibb.co/2W563k7/julieta-venegas.jpg"
+                                               Margin="19" />
+                </Grid>
+            </StackLayout>
+            <!--#endregion-->
+        </Grid>
+        <!--#region Encabezado -->
+        <StackLayout HeightRequest="35"
+                     Orientation="Horizontal"
+                     VerticalOptions="Start"
+                     Margin="20">
+            <Image Source="https://i.ibb.co/wB3NHKF/live.png" />
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand">
+                <Label Text="Siguiendo"
+                       TextColor="#9A9A9A"
+                       VerticalOptions="Center"
+                       FontSize="23"
+                       FontAttributes="Bold" />
+                <BoxView BackgroundColor="#F52E50"
+                         HeightRequest="12"
+                         WidthRequest="12"
+                         CornerRadius="6"
+                         VerticalOptions="Start"
+                         TranslationX="-8" />
+                <Label Text="Para ti"
+                       TextColor="White"
+                       VerticalOptions="Center"
+                       FontSize="23"
+                       FontAttributes="Bold" />
+            </StackLayout>
+            <Image Source="https://i.ibb.co/7vTxwZ3/buscar.png"
+                   VerticalOptions="Center" />
+        </StackLayout>
+        <!--#endregion-->
+        <!--#region Pie de pagina -->
+        <StackLayout Grid.Row="1"
+                     Orientation="Horizontal"
+                     Spacing="25"
+                     Margin="27,5">
+            <StackLayout VerticalOptions="Center">
+                <Image Source="https://i.ibb.co/8jbMDFq/casa-silueta-negra-sin-puerta-1.png"
+                       HeightRequest="30" />
+                <Label Text="Inicio"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="12" />
+            </StackLayout>
+            <StackLayout VerticalOptions="Center">
+                <Image Source="https://i.ibb.co/LztL1Wz/brujula.png"
+                       HeightRequest="30" />
+                <Label Text="Tendencias"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="12" />
+            </StackLayout>
+            <Grid HorizontalOptions="CenterAndExpand">
+                <BoxView BackgroundColor="#FF02A0"
+                         TranslationX="8"
+                         CornerRadius="12"
+                         VerticalOptions="Start"
+                         HeightRequest="48"
+                         WidthRequest="60" />
+                <BoxView BackgroundColor="#00DFEF"
+                         TranslationX="-8"
+                         CornerRadius="12"
+                         VerticalOptions="Start"
+                         HeightRequest="48" />
+                <Button CornerRadius="12"
+                        FontAttributes="Bold"
+                        FontSize="30"
+                        BackgroundColor="White"
+                        VerticalOptions="Start"
+                        HeightRequest="48"
+                        WidthRequest="60" />
+                <Label Text="+"
+                       FontSize="35"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       TranslationY="-6" />
+            </Grid>
+            <StackLayout VerticalOptions="Center">
+                <Image Source="https://i.ibb.co/CKvk5CQ/comentario-2.png"
+                       HeightRequest="30" />
+                <Label Text="Bandeja"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="12" />
+            </StackLayout>
+            <StackLayout VerticalOptions="Center">
+                <Image Source="https://i.ibb.co/4JNNXWW/perfil-del-usuario.png"
+                       HeightRequest="30" />
+                <Label Text="Perfil"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="12" />
+            </StackLayout>
+        </StackLayout>
+        <!--#endregion-->
+    </Grid>
+</ContentPage>
