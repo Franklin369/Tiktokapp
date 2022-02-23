@@ -17,12 +17,12 @@ namespace Tiktokapp.Vistas {
     public partial class Reproductor : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Octane.Xamarin.Forms.VideoPlayer.VideoPlayer rvideo;
+        private global::Xamarin.Forms.CarouselView listavideos;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Reproductor));
-            rvideo = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Octane.Xamarin.Forms.VideoPlayer.VideoPlayer>(this, "rvideo");
+            listavideos = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CarouselView>(this, "listavideos");
         }
     }
 }

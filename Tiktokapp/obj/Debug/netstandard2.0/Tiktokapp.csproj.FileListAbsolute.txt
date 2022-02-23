@@ -1,6 +1,5 @@
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\bin\Debug\netstandard2.0\Tiktokapp.deps.json
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\bin\Debug\netstandard2.0\Tiktokapp.dll
-E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\bin\Debug\netstandard2.0\ref\Tiktokapp.dll
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\bin\Debug\netstandard2.0\Tiktokapp.pdb
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\Tiktokapp.csproj.AssemblyReference.cache
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\Tiktokapp.GeneratedMSBuildEditorConfig.editorconfig
@@ -13,3 +12,4 @@ E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\Tiktokapp.dll
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\ref\Tiktokapp.dll
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\Tiktokapp.pdb
+E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\refint\Tiktokapp.dll

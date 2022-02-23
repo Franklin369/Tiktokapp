@@ -3,97 +3,132 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tiktokapp.Vistas.Reproductor"
              xmlns:ImageCircular="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
-             xmlns:video="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer">
+             xmlns:video="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer"
+             xmlns:trigger="clr-namespace:Tiktokapp.Triggers.Treproductor">
     <Grid BackgroundColor="Black"
           RowDefinitions="*,70">
-        <Grid>
-            <video:VideoPlayer 
-                               AutoPlay="True"
-                               Repeat="True"
-                               x:Name="rvideo"/>
-            <StackLayout HorizontalOptions="Start"
-                         VerticalOptions="End"
-                         Margin="12,0,0,12">
-                <Label Text="@star_tyo"
-                       TextColor="White"
-                       FontAttributes="Bold" />
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="MOOD"
-                           TextColor="White"
-                           FontAttributes="Bold" />
-                    <Label Text="#Viral"
-                           TextColor="White"
-                           FontAttributes="Bold" />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Image Source="https://i.ibb.co/w74mB9n/musica.png"
-                           HeightRequest="18" />
-                    <Label Text="Nombre de cancion"
-                           TextColor="White"
-                           FontAttributes="Bold" />
-                </StackLayout>
-            </StackLayout>
-            <!--#region Panel disco giratorio -->
-            <StackLayout VerticalOptions="End"
-                         HorizontalOptions="End"
-                         WidthRequest="80"
-                         Spacing="30"
-                         Margin="0,0,12,12">
-                <Grid>
-                    <ImageCircular:CircleImage Source="https://i.ibb.co/2W563k7/julieta-venegas.jpg"
-                                               BorderColor="White"
-                                               BorderThickness="2" />
-                    <Button BackgroundColor="#F5004E"
-                            HeightRequest="30"
-                            WidthRequest="30"
-                            CornerRadius="15"
-                            HorizontalOptions="Center"
-                            VerticalOptions="End"
-                            TranslationY="12" />
-                    <Label Text="+"
-                           TextColor="White"
-                           VerticalOptions="End"
-                           FontAttributes="Bold"
-                           HorizontalOptions="Center"
-                           VerticalTextAlignment="End"
-                           FontSize="18"
-                           TranslationY="10" />
-                </Grid>
-                <StackLayout>
-                    <Image Source="https://i.ibb.co/ZW9j2Z8/me-gusta.png"
-                           HeightRequest="55" />
-                    <Label Text="278.2 k"
-                           FontSize="18"
-                           TextColor="White"
-                           FontAttributes="Bold"
-                           HorizontalTextAlignment="Center" />
-                </StackLayout>
-                <StackLayout>
-                    <Image Source="https://i.ibb.co/D8x1NLf/chat-de-burbujas.png"
-                           HeightRequest="55" />
-                    <Label Text="1488"
-                           FontSize="18"
-                           TextColor="White"
-                           FontAttributes="Bold"
-                           HorizontalTextAlignment="Center" />
-                </StackLayout>
-                <StackLayout>
-                    <Image Source="https://i.ibb.co/vHsH8Yv/compartir-1.png"
-                           HeightRequest="55" />
-                    <Label Text="12.6 k"
-                           FontSize="18"
-                           TextColor="White"
-                           FontAttributes="Bold"
-                           HorizontalTextAlignment="Center" />
-                </StackLayout>
-                <Grid>
-                    <Image Source="https://i.ibb.co/PC0tq1n/5856b3d14f6ae202fedf2793.png" />
-                    <ImageCircular:CircleImage Source="https://i.ibb.co/2W563k7/julieta-venegas.jpg"
-                                               Margin="19" />
-                </Grid>
-            </StackLayout>
-            <!--#endregion-->
-        </Grid>
+        <CarouselView ItemsSource="{Binding Listavideos}"
+                      x:Name="listavideos">
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                                   SnapPointsType="MandatorySingle" />
+            </CarouselView.ItemsLayout>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <video:VideoPlayer Source="{Binding Video}"
+                                           AutoPlay="True"
+                                           Repeat="True"
+                                           x:Name="rvideo" />
+                        <StackLayout HorizontalOptions="Start"
+                                     VerticalOptions="End"
+                                     Margin="12,0,0,12">
+                            <Label Text="@star_tyo"
+                                   TextColor="White"
+                                   FontAttributes="Bold" />
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="MOOD"
+                                       TextColor="White"
+                                       FontAttributes="Bold" />
+                                <Label Text="#Viral"
+                                       TextColor="White"
+                                       FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="https://i.ibb.co/w74mB9n/musica.png"
+                                       HeightRequest="18" />
+                                <Label Text="Nombre de cancion"
+                                       TextColor="White"
+                                       FontAttributes="Bold" />
+                            </StackLayout>
+                        </StackLayout>
+                        <!--#region Panel disco giratorio -->
+                        <StackLayout VerticalOptions="End"
+                                     HorizontalOptions="End"
+                                     WidthRequest="80"
+                                     Spacing="30"
+                                     Margin="0,0,12,12">
+                            <Grid>
+                                <ImageCircular:CircleImage Source="https://i.ibb.co/2W563k7/julieta-venegas.jpg"
+                                                           BorderColor="White"
+                                                           BorderThickness="2" />
+                                <Button BackgroundColor="#F5004E"
+                                        HeightRequest="30"
+                                        WidthRequest="30"
+                                        CornerRadius="15"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="End"
+                                        TranslationY="12" />
+                                <Label Text="+"
+                                       TextColor="White"
+                                       VerticalOptions="End"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Center"
+                                       VerticalTextAlignment="End"
+                                       FontSize="18"
+                                       TranslationY="10" />
+                            </Grid>
+                            <StackLayout>
+                                <Image Source="https://i.ibb.co/ZW9j2Z8/me-gusta.png"
+                                       HeightRequest="55" />
+                                <Label Text="278.2 k"
+                                       FontSize="18"
+                                       TextColor="White"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center" />
+                            </StackLayout>
+                            <StackLayout>
+                                <Image Source="https://i.ibb.co/D8x1NLf/chat-de-burbujas.png"
+                                       HeightRequest="55" />
+                                <Label Text="1488"
+                                       FontSize="18"
+                                       TextColor="White"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center" />
+                            </StackLayout>
+                            <StackLayout>
+                                <Image Source="https://i.ibb.co/vHsH8Yv/compartir-1.png"
+                                       HeightRequest="55" />
+                                <Label Text="12.6 k"
+                                       FontSize="18"
+                                       TextColor="White"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center" />
+                            </StackLayout>
+                            <Grid>
+                                <Image Source="https://i.ibb.co/PC0tq1n/5856b3d14f6ae202fedf2793.png" />
+                                <ImageCircular:CircleImage Source="https://i.ibb.co/2W563k7/julieta-venegas.jpg"
+                                                           Margin="19" />
+                            </Grid>
+                        </StackLayout>
+                        <!--#endregion-->
+                        <Image Source="https://i.ibb.co/vjcFKMf/punta-de-flecha-del-boton-de-reproduccion.png"
+                               HeightRequest="40"
+                               VerticalOptions="Center"
+                               IsVisible="{Binding IndicadorIconoplay}">
+                            <Image.Triggers>
+                                <MultiTrigger TargetType="Image">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition Binding="{Binding Indicador}" Value="True"/>
+                                    </MultiTrigger.Conditions>
+                                    <MultiTrigger.EnterActions>
+                                        <trigger:Ticonplay Indicador="False"/>
+                                    </MultiTrigger.EnterActions>
+                                    <MultiTrigger.ExitActions>
+                                        <trigger:Ticonplay Indicador="True"/>
+                                    </MultiTrigger.ExitActions>
+                                </MultiTrigger>
+                            </Image.Triggers>
+                        </Image>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BindingContext.Seleccionarcommand ,Source={x:Reference listavideos}}"
+                                                  CommandParameter="{Binding .}"
+                                                  NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
         <!--#region Encabezado -->
         <StackLayout HeightRequest="35"
                      Orientation="Horizontal"
