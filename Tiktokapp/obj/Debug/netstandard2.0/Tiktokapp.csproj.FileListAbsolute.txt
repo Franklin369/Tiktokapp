@@ -10,6 +10,6 @@ E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\Tiktokapp.csproj.CoreCompileInputs.cache
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\XamlC.stamp
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\Tiktokapp.dll
-E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\ref\Tiktokapp.dll
-E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\Tiktokapp.pdb
 E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\refint\Tiktokapp.dll
+E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\Tiktokapp.pdb
+E:\Proyectos Xamarin\Desafios\Hijos\Tiktokapp\Tiktokapp\obj\Debug\netstandard2.0\ref\Tiktokapp.dll

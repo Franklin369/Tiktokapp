@@ -19,7 +19,22 @@
                         <video:VideoPlayer Source="{Binding Video}"
                                            AutoPlay="True"
                                            Repeat="True"
-                                           x:Name="rvideo" />
+                                           x:Name="rvideo">
+                            <video:VideoPlayer.Triggers>
+                                <MultiTrigger TargetType="video:VideoPlayer">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition Binding="{Binding Indicador}"
+                                                          Value="True"/>
+                                    </MultiTrigger.Conditions>
+                                    <MultiTrigger.EnterActions>
+                                        <trigger:Treprovideo Indicador="True"/>
+                                    </MultiTrigger.EnterActions>
+                                    <MultiTrigger.ExitActions>
+                                        <trigger:Treprovideo Indicador="False"/>
+                                    </MultiTrigger.ExitActions>
+                                </MultiTrigger>
+                            </video:VideoPlayer.Triggers>
+                        </video:VideoPlayer>
                         <StackLayout HorizontalOptions="Start"
                                      VerticalOptions="End"
                                      Margin="12,0,0,12">
