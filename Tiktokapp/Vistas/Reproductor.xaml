@@ -24,13 +24,13 @@
                                 <MultiTrigger TargetType="video:VideoPlayer">
                                     <MultiTrigger.Conditions>
                                         <BindingCondition Binding="{Binding Indicador}"
-                                                          Value="True"/>
+                                                          Value="True" />
                                     </MultiTrigger.Conditions>
                                     <MultiTrigger.EnterActions>
-                                        <trigger:Treprovideo Indicador="True"/>
+                                        <trigger:Treprovideo Indicador="True" />
                                     </MultiTrigger.EnterActions>
                                     <MultiTrigger.ExitActions>
-                                        <trigger:Treprovideo Indicador="False"/>
+                                        <trigger:Treprovideo Indicador="False" />
                                     </MultiTrigger.ExitActions>
                                 </MultiTrigger>
                             </video:VideoPlayer.Triggers>
@@ -112,8 +112,31 @@
                             </StackLayout>
                             <Grid>
                                 <Image Source="https://i.ibb.co/PC0tq1n/5856b3d14f6ae202fedf2793.png" />
-                                <ImageCircular:CircleImage Source="https://i.ibb.co/2W563k7/julieta-venegas.jpg"
-                                                           Margin="19" />
+                                <Frame Padding="0"
+                                       CornerRadius="40"
+                                       HeightRequest="40"
+                                       WidthRequest="80"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="20">
+                                      <Image Source="https://i.ibb.co/2W563k7/julieta-venegas.jpg"
+                                                          
+                                             Aspect="AspectFill"/>
+                                </Frame>
+                              
+                                <Grid.Triggers>
+                                    <MultiTrigger TargetType="Grid">
+                                        <MultiTrigger.Conditions >
+                                            <BindingCondition Binding="{Binding Indicador}" Value="true"/>
+                                        </MultiTrigger.Conditions>
+                                        <MultiTrigger.EnterActions>
+                                            <trigger:Trotar />
+                                        </MultiTrigger.EnterActions>
+                                        <MultiTrigger.ExitActions>
+                                            <trigger:Tstoprotar />
+                                        </MultiTrigger.ExitActions>
+                                    </MultiTrigger>
+                                </Grid.Triggers>
                             </Grid>
                         </StackLayout>
                         <!--#endregion-->
@@ -124,13 +147,14 @@
                             <Image.Triggers>
                                 <MultiTrigger TargetType="Image">
                                     <MultiTrigger.Conditions>
-                                        <BindingCondition Binding="{Binding Indicador}" Value="True"/>
+                                        <BindingCondition Binding="{Binding Indicador}"
+                                                          Value="True" />
                                     </MultiTrigger.Conditions>
                                     <MultiTrigger.EnterActions>
-                                        <trigger:Ticonplay Indicador="False"/>
+                                        <trigger:Ticonplay Indicador="False" />
                                     </MultiTrigger.EnterActions>
                                     <MultiTrigger.ExitActions>
-                                        <trigger:Ticonplay Indicador="True"/>
+                                        <trigger:Ticonplay Indicador="True" />
                                     </MultiTrigger.ExitActions>
                                 </MultiTrigger>
                             </Image.Triggers>
